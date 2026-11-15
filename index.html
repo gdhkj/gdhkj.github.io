@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090d18">
+<title>ROYAL CLUB｜虚拟娱乐中心</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">♛</span><span>ROYAL <b>CLUB</b><small>VIRTUAL ENTERTAINMENT</small></span></a>
+  <nav><button class="nav active" data-page="home">大厅</button><button class="nav" data-page="baccarat">百家乐</button><button class="nav" data-page="lottery">模拟六合彩</button><button class="nav" data-page="records">游戏记录</button></nav>
+  <div class="wallet"><span>虚拟积分</span><strong id="balance">10,000</strong><i>◆</i></div>
+</header>
+<main>
+<section id="home" class="page active">
+  <div class="hero">
+    <div class="hero-copy"><span class="eyebrow">WELCOME TO ROYAL CLUB</span><h1>尊享娱乐<br><em>每一刻精彩</em></h1><p>仅供娱乐体验的虚拟游戏空间。所有积分及开奖结果均为模拟数据，不涉及真实货币。</p><button class="gold-btn" data-goto="baccarat">进入游戏大厅 <span>→</span></button></div>
+    <div class="hero-art"><div class="halo"></div><div class="playing-card card-one">A<br><span>♠</span></div><div class="playing-card card-two">K<br><span>♥</span></div><div class="coin">♛</div><div class="hero-caption">EXCLUSIVE<br><b>GAME EXPERIENCE</b></div></div>
+  </div>
+  <div class="section-heading"><div><span class="eyebrow">GAME SELECTION</span><h2>精选游戏</h2></div><span class="muted">选择游戏开始体验</span></div>
+  <div class="game-grid">
+    <article class="game-card baccarat-card"><div class="game-icon">♠</div><div><span class="tag">CARD GAME</span><h3>百家乐</h3><p>庄 · 闲 · 和｜虚拟积分模拟</p><button class="text-btn" data-goto="baccarat">立即进入 →</button></div></article>
+    <article class="game-card lottery-card"><div class="game-icon">◉</div><div><span class="tag">NUMBER DRAW</span><h3>模拟六合彩</h3><p>随机号码生成｜开奖历史</p><button class="text-btn" data-goto="lottery">立即进入 →</button></div></article>
+  </div>
+  <div class="notice">ⓘ 本网站为纯娱乐演示。无充值、提现、现金下注、真实奖品或积分兑换功能。</div>
+</section>
+
+<section id="baccarat" class="page">
+ <div class="page-title"><span class="eyebrow">CLASSIC CARD TABLE</span><h1>百家乐</h1><p>使用虚拟积分体验模拟发牌。每局结果由本地程序随机生成。</p></div>
+ <div class="table-wrap">
+  <div class="table-top"><span>ROYAL TABLE · NO. 01</span><span id="roundNo">ROUND 0001</span></div>
+  <div class="card-table">
+   <div class="hand"><h3>庄家 <small>BANKER</small></h3><div id="bankerCards" class="cards"><div class="card-back">♛</div><div class="card-back">♛</div></div><div class="score" id="bankerScore">—</div></div>
+   <div class="table-center"><div class="vs">VS</div><div id="gameResult" class="result-label">等待开始</div></div>
+   <div class="hand"><h3>闲家 <small>PLAYER</small></h3><div id="playerCards" class="cards"><div class="card-back">♛</div><div class="card-back">♛</div></div><div class="score" id="playerScore">—</div></div>
+  </div>
+  <div class="table-bottom"><div class="road-label">近期结果</div><div id="road" class="road"></div></div>
+ </div>
+ <div class="control-panel">
+  <div class="control-head"><div><span class="eyebrow">PLACE VIRTUAL BET</span><h2>选择模拟选项</h2></div><span class="balance-small">余额 <b id="balance2">10,000</b></span></div>
+  <div class="bet-options"><button class="bet-option selected" data-choice="player"><b>闲</b><small>PLAYER</small></button><button class="bet-option" data-choice="banker"><b>庄</b><small>BANKER</small></button><button class="bet-option" data-choice="tie"><b>和</b><small>TIE</small></button></div>
+  <div class="stake-row"><label for="stake">模拟积分数量</label><div class="stake-input"><button id="minus">−</button><input id="stake" type="number" min="10" max="5000" step="10" value="100"><button id="plus">+</button></div><div class="quick-stakes"><button data-stake="100">100</button><button data-stake="500">500</button><button data-stake="1000">1,000</button></div></div>
+  <button id="deal" class="gold-btn full">开始模拟发牌</button><p class="fineprint">模拟规则：闲/庄胜按 1:1 计算，和局按 8:1 计算；庄家佣金不纳入本演示。无真实货币价值。</p>
+ </div>
+</section>
+
+<section id="lottery" class="page">
+ <div class="page-title"><span class="eyebrow">RANDOM NUMBER DRAW</span><h1>模拟六合彩</h1><p>生成一组 1–49 的随机号码及特别号。仅作随机数演示，不对应任何官方彩票。</p></div>
+ <div class="lottery-panel">
+  <div class="lottery-top"><div><span class="eyebrow">ROYAL RANDOM DRAW</span><h2>幸运号码</h2></div><span id="drawIssue" class="issue">模拟期号 RC-000001</span></div>
+  <div id="lotteryBalls" class="balls"><span class="ball placeholder">?</span><span class="ball placeholder">?</span><span class="ball placeholder">?</span><span class="ball placeholder">?</span><span class="ball placeholder">?</span><span class="ball placeholder">?</span><span class="ball special placeholder">?</span></div>
+  <div class="special-note"><span class="dot"></span> 最后一颗为特别号</div>
+  <button id="draw" class="gold-btn">生成随机号码 <span>✦</span></button>
+ </div>
+ <div class="section-heading"><div><span class="eyebrow">DRAW ARCHIVE</span><h2>最近模拟结果</h2></div></div>
+ <div class="history-table"><div class="history-head"><span>模拟期号</span><span>号码结果</span><span>生成时间</span></div><div id="lotteryHistory"><div class="empty">尚无开奖记录</div></div></div>
+</section>
+
+<section id="records" class="page">
+ <div class="page-title"><span class="eyebrow">PERSONAL ACTIVITY</span><h1>游戏记录</h1><p>此设备浏览器本地保存的模拟游戏记录。</p></div>
+ <div class="stats-grid"><div class="stat"><span>当前虚拟积分</span><b id="statBalance">10,000</b></div><div class="stat"><span>百家乐局数</span><b id="statGames">0</b></div><div class="stat"><span>模拟开奖次数</span><b id="statDraws">0</b></div></div>
+ <div class="history-table"><div class="history-head record-head"><span>时间</span><span>游戏 / 选择</span><span>结果</span><span>积分变化</span></div><div id="gameHistory"><div class="empty">暂无游戏记录</div></div></div>
+ <div class="record-actions"><button id="reset" class="outline-btn">重置本机演示数据</button><span class="muted">重置后无法恢复。</span></div>
+</section>
+</main>
+<footer><div class="footer-brand">♛ ROYAL CLUB</div><p>纯虚拟娱乐演示 · 不提供真实博彩服务</p><small>© 2026 ROYAL CLUB. FOR ENTERTAINMENT DEMO ONLY.</small></footer>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body></html>
